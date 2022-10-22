@@ -60,10 +60,9 @@ app.post('/movie', (req, res) => {
 app.put('/movie', (req, res) => {
   console.log('movie 수정 요청');
   const id = req.body.id;
-  const director = req.body.director;
-  const running_time = req.body.running_time;
+  const title = req.body.title;
 
-  db.query(`update movie set director='${director}', running_time=${running_time} where id=${id}`, (err, data) => {
+  db.query(`update movie set title='${title}' where id=${id}`, (err, data) => {
     if(!err) {
       res.send(data);
     } else {

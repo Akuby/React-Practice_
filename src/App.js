@@ -6,13 +6,25 @@ import axios from 'axios';
 // 함수형 컴포넌트
 function App() {
 
+  
   const selectAll = async() => {
     alert('모두조회!');
     const result = await axios.get('/movie');
-    console.log(result);
     // 원래 서버 주소까지 다 적어야 찾아감
     // http://localhost:4000/moives
     // ES6 - template string, '''async await''', arrow function, const let 등..
+    const data = result.data;
+    const body = document.querySelector('.App');
+    let myDiv = document.querySelectorAll('.card');
+    myDiv.forEach(el => {
+      body.removeChild(el);
+    })
+    data.forEach(el => {
+      let myDiv = document.createElement('div');
+      myDiv.classList.add('card')
+      myDiv.innerHTML = `${el.id} | ${el.title} | ${el.director} | ${el.running_time}분`;
+      body.append(myDiv);
+    });
   }
   
   const selectWhere = async() => {
@@ -37,7 +49,9 @@ function App() {
 
   const updateData = async() => {
     alert('데이터 수정');
-    const updateObj = {id:3, director:'성시경', running_time:120}
+    let updateDataIdx = document.getElementById('updateDataIdx').value;
+    let updateDataName = document.getElementById('updateDataName').value;
+    let updateObj = {id: updateDataIdx, title: updateDataName};
     const result = await axios.put('/movie', updateObj);
     console.log(result);
   }
