@@ -1,0 +1,17 @@
+#person {
+width: 300px;
+height: 150px;
+background-color: white;
+margin-bottom: 30px;
+}
+#person > div:first-child {
+  background-color: rgb(255, 230, 230);
+}
+
+#person > div:nth-child(2) {
+  background-color: rgb(255, 240, 191);
+}
+
+#person > div:last-child {
+  background-color: rgb(217, 217, 255);
+}

@@ -1,0 +1,23 @@
+#movie {
+  width: 400px;
+  height: 150px;
+  background-color: white;
+  margin-bottom: 30px;
+  border-radius: 20px;
+  border: 1px solid #e7e7e7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  }
+  #movieLeft {
+    width: 30%;
+    height: 100%;
+    background-color: aquamarine;
+  }
+
+  #movieRight {
+    width: fit-content;
+    height: 100%;
+    background-color: yellowgreen;
+  }
