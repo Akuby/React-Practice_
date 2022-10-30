@@ -1,0 +1,21 @@
+.todo {
+  width: 300px;
+  height: 100px;
+  background-color: rgb(255, 255, 255);
+  overflow: hidden;
+  border: 1px solid rgb(243, 243, 243);
+}
+
+.todo-content {
+  height: 100%;
+  display: flex;
+  text-align: center;
+  align-items: center;
+}
+
+.todo-content > div:nth-child(1) {
+  width: 20%;
+}
+.todo-content > div:nth-child(2) {
+  width: 80%;
+}
