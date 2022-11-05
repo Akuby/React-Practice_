@@ -1,0 +1,18 @@
+.post {
+  width: 100%;
+  height: 50px;
+  background-color: rgb(255, 255, 255);
+  margin-bottom: 5px;
+}
+.post > span {
+  display: inline-block;
+  height: 100%;
+}
+.post > span:first-child {
+  width: 10%;
+  background-color: rgb(240, 193, 209);
+}
+.post > span:last-child {
+  width: 80%;
+  background-color: palevioletred;
+}
