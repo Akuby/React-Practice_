@@ -23,6 +23,7 @@ class App extends Component {
 
   delPerson=(name)=>{
     //filter
+    console.log(name)
     const filteredList=this.state.personnelList.filter(
       (data)=>(data.name !== name)
     )
@@ -34,7 +35,30 @@ class App extends Component {
     //setState -> render
   }
 
+  updatePerson = (name, height, gender) => {
+    alert('수정(a)')
+    console.log(name, height, gender)
+    // const {personnelList} = this.state
+    // //비구조화할당, 구조분해 할당
+    // const len = personnelList.length
 
+    // for(let i=0; i<len; i++) {
+    //   if(personnelList[i].name === name) {
+    //     alert(`찾았다! ${personnelList[i].height} => ${height}`)
+    //     personnelList[i].height = height
+    //   }
+    // }
+    // this.setState({
+    //   personnelList:personnelList
+    // })
+    const updatePersonList = this.state.personnelList.map(
+      // (data) => (data.name === name) ? ({name:name, height:height, gender:gender}) : data
+      (data) => (data.name === name) ? ({...data, height:height, gender:gender}) : data // 전개연산자 이렇게 쓰는거 아닌거 같은데...
+    )
+    this.setState({
+      personnelList:updatePersonList
+    })
+  }
   render() {
 
     const list = this.state.personnelList.map(
@@ -45,6 +69,7 @@ class App extends Component {
         gender = {data.gender}
         height = {data.height}
         delPerson={this.delPerson}
+        updatePerson={this.updatePerson}
         />
       )
     )
