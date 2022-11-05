@@ -4,3 +4,14 @@
   background-color: rgb(147, 194, 255);
   margin: 0 auto;
 }
+.page {
+  display: inline-block;
+  text-align: center;
+  border: 1px solid #e8e8e8;
+  width: 30px;
+  line-height: 30px;
+  background-color: #fff;
+  margin-right: 5px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
