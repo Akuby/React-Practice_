@@ -21,6 +21,20 @@ class App extends Component {
     })
   }
 
+  delPerson=(name)=>{
+    //filter
+    const filteredList=this.state.personnelList.filter(
+      (data)=>(data.name !== name)
+    )
+    // //PersonList배열에 있는 id랑 함수 매개변수로 넘어온 아이디랑 일치하지 않는
+    // //배열 원소만 리턴해서, 새로운 배열 생성
+    this.setState({
+      personnelList:filteredList
+    })
+    //setState -> render
+  }
+
+
   render() {
 
     const list = this.state.personnelList.map(
@@ -30,6 +44,7 @@ class App extends Component {
         name = {data.name}
         gender = {data.gender}
         height = {data.height}
+        delPerson={this.delPerson}
         />
       )
     )
