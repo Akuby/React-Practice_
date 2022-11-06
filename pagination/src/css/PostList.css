@@ -1,6 +1,38 @@
 #post-list {
     width: 800px;
-    height: 40%;
-    background-color: rgb(255, 236, 236);
+    height: 300px;
+    background-color: rgb(255, 255, 255);
     margin: 0 auto;
+}
+#header {
+    width: 800px;
+    line-height: 40px;
+    margin: 0 auto;
+    display: flex;
+    text-align: center;
+    border-top: 2px solid #0b3d6e;
+    border-bottom: 1px solid #bbbfcd;
+    background-color: #fff;
+    font-weight: 800;
+    color: #0b3d6e;
+}
+#header > span{
+    display: inline-block;
+    height: 100%;
+    flex: 1;
+    position: relative;
+}
+#header > span::after{
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 25%;
+    height: 50%;
+    border-right: 1px solid #bbbfcd;
+}
+#header > span:nth-child(2){
+    flex: 3;
+}
+#header > span:last-child:after{
+    display: none;
 }
