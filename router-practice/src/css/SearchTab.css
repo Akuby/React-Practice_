@@ -1,0 +1,8 @@
+#search-tab {
+  background-color: yellowgreen;
+  text-align: center;
+}
+#search-tab input {
+  display: inline-block;
+  width: 600px;
+}

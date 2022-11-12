@@ -3,7 +3,7 @@ function Home(props) {
   return(
     <div id='home'>
       <h1>Home</h1>
-      <a href="/profile">to profile</a>
+      <a href="/searchResult">to profile</a>
     </div>
   )
 }
