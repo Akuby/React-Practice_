@@ -1,0 +1,10 @@
+#profile {
+  width: 500px;
+  height: 200px;
+  background-color: rgb(208, 255, 255);
+  margin: 0 auto;
+  text-align: center;
+}
+a {
+  background-color: aliceblue;
+}
