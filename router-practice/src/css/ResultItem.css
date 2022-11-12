@@ -1,0 +1,17 @@
+#result-item {
+  background-color: aliceblue;
+  margin-bottom: 1rem;
+  list-style: none;
+  width: 45%;
+}
+#result-item a {
+  display: flex;
+  text-decoration: none;
+  color: #000;
+}
+#result-item .book-img {
+  width: 10rem;
+}
+#result-item .book-info {
+  text-align: left;
+}

@@ -1,5 +1,5 @@
 #SearchResult {
-  width: 500px;
+  width: 100%;
   height: 200px;
   background-color: rgb(208, 255, 255);
   margin: 0 auto;
@@ -7,4 +7,11 @@
 }
 a {
   background-color: aliceblue;
+}
+.result-ul {
+  margin: 0 auto;
+  padding: 0;
+  width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
 }
