@@ -1,8 +1,9 @@
 import '../css/Home.css'
-function Home(props) {
+function Home() {
   return(
     <div id='home'>
-      <h1>네이버 도서 검색</h1>
+      <h1>This is Home</h1>
+      <p>중첩 라우터 연습</p>      
     </div>
   )
 }

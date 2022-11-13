@@ -12,14 +12,11 @@ class App extends Component {
       inputValue:''
     }
   }
-  doSearch = (input) => {
-    this.setState({inputValue: input})
-  }
   render() {
     return(
       <div id="App">
         <BrowserRouter>
-        <SearchTab doSearch={this.doSearch}/>
+        <SearchTab/>
         <Routes>
           <Route path='/' element={<Home/>} />
           <Route path='/searchResult' element={<SearchResult/>} />
