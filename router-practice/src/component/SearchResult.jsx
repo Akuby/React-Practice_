@@ -3,12 +3,15 @@ import '../css/SearchResult.css'
 import queryString from 'query-string';
 import axios from 'axios';
 import ResultItem from './ResultItem';
+import Pagination from './Pagination'
 class SearchResult extends Component {
   constructor(props) {
     super(props)
     this.state = {
       searchValue:'',
-      bookData: [{}]
+      bookData: [{}],
+      postPerPage: 7,
+      currentPage: 1
     }
   }
   componentDidMount() {
@@ -20,7 +23,18 @@ class SearchResult extends Component {
       this.getData(this.state.searchValue)
     }, 1);
   }
-
+  setCurrentPage = (page) => { 
+    this.setState({
+      currentPage:page
+    })
+  }
+  currentPostList= (totalPostList) => {
+    const {currentPage, postPerPage} = this.state
+    const startIdx = (currentPage-1) * postPerPage
+    const endIdx = startIdx + postPerPage
+    const slicedList = totalPostList.slice(startIdx,endIdx)
+    return slicedList;
+  }
   getData = async(searchValue) => {
     const ID_KEY = 'G_ZvwG5McXcQ6UrCuWcv'
     const SECRET_KEY = 'Y28iSq77Zc'
@@ -50,6 +64,7 @@ class SearchResult extends Component {
         <ResultItem key={Number(data.isbn)} title={data.title} author={data.author} image={data.image} link={data.link} pub={data.publisher} price={data.discount}/>
       )
     )
+    const {postPerPage, currentPage} = this.state;
     return(
       <div id='SearchResult'>
         <h1>{this.state.searchValue}의 검색결과</h1>
@@ -57,6 +72,7 @@ class SearchResult extends Component {
         <ul className='result-ul'>
         {result}
         </ul>
+        <Pagination setCurrentPage={this.setCurrentPage} postPerPage={postPerPage} currentPage={currentPage} />
       </div>
     )
   }
