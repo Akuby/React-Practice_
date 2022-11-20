@@ -41,7 +41,7 @@ class SearchResult extends Component {
     await axios.get('v1/search/book.json',{
       params: {
         query: searchValue,
-        display: 20
+        display: 40
       },
       headers : {
         'X-Naver-Client-Id': ID_KEY,
@@ -72,7 +72,6 @@ class SearchResult extends Component {
         <ul className='result-ul'>
         {result}
         </ul>
-        <Pagination setCurrentPage={this.setCurrentPage} postPerPage={postPerPage} currentPage={currentPage} />
       </div>
     )
   }

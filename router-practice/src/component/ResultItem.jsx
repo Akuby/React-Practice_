@@ -6,9 +6,9 @@ function ResultItem(props) {
       <img src={props.image} alt={props.title} className='book-img'/>
       <div className='book-info'>
       <h2>{props.title}</h2>
-      <p>저자 | {props.author}</p>
-      <p>출판사 | {props.pub}</p>
-      <p>가격 | {props.price}</p>
+      <p>부제 | {props.subtitle}</p>
+      <p>감독 | {props.director}</p>
+      <p>평점 | {props.userRating}</p>
       </div>
     </a>
     </li>

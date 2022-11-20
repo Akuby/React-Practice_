@@ -1,0 +1,48 @@
+#Home {
+  margin: 0;
+  background-color: palegreen;
+  height: 800px;
+}
+#SearchResult {
+  background-color: yellowgreen;
+  height: 800px;
+}
+#SearchTab {
+  background-color: pink;
+  width: 80%;
+  height: 80px;
+  margin: 0 auto;
+}
+#result-item {
+  background-color: aliceblue;
+  list-style: none;
+  width: 45%;
+  margin: 0 auto 1rem;
+}
+#result-item a {
+  display: flex;
+  text-decoration: none;
+  color: #000;
+  align-items: center;
+}
+#result-item .book-img {
+  display: block;
+  width: 6rem;
+  height: 7rem;
+}
+#result-item .book-info {
+  text-align: left;
+}
+#result-item h2, p {
+  margin: 5px;
+}
+.Pagination {
+  position: absolute;
+  bottom: 170px;
+  left: 50%;
+  transform: translate(-50%);
+}
+.Pagination > button.active {
+  color: #fff;
+  background-color: rgb(48, 92, 48);
+}
