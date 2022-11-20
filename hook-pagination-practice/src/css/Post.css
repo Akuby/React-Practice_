@@ -1,0 +1,17 @@
+.Post {
+  width: 1200px;
+  line-height: 50px;
+  background-color: rgb(255, 253, 231);
+  margin-bottom: 10px;
+  display: flex;
+  justify-items: left;
+}
+.Post>span {
+  display: inline-block;
+}
+.Post>span:first-child {
+  width: 50px;
+}
+.Post>span:last-child {
+  width: 100px;
+}

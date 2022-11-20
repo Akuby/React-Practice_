@@ -1,0 +1,27 @@
+.Pagination {
+  background-color: rgb(126, 158, 126);
+  margin: 0 auto;
+  width: 1200px;
+  height: 80px;
+}
+.Pagination > button {
+  border: none;
+  width: 30px;
+  height: 30px;
+  margin: 5px;
+  cursor: pointer;
+  font-size: 17px;
+}
+.Pagination > button.page:hover {
+  background-color: rgb(224, 224, 224);
+}
+.Pagination > button.page {
+  background-color: #fff;
+}
+.Pagination > button.active {
+  color: #fff;
+  background-color: rgb(48, 92, 48);
+}
+.Pagination > button.navigator {
+  background-color: transparent;
+}
